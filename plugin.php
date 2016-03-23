@@ -47,4 +47,24 @@ function create_post_type() {
 	);
 }
 
-?>
+// This code creates the widget. It can be referenced from https://codex.wordpress.org/Widgets_API
+class authentic_widget extends WP_Widget {
+	
+	// This sets up the Widget's ID, Name, and Description.
+		public function __construct() {
+			parent::__construct(
+			'authentic_widget',
+			__('Authentic Widget', 'authentic_widget'),
+			array( 'description' => __( 'Display posts from a Custom Post Type', 'authentic_widget' ), )
+			);
+		}
+		
+	// This is the front-end display of widget.
+		public function widget($args, $instance) {
+			extract($args, EXTR_SKIP);
+            echo $before_widget;
+			$title = empty($instance['title']) ? ' ' : apply_filters('widget_title', $instance['title']);
+            
+			if (!empty($title))
+			echo $before_title . $title . $after_title;?>
+								
