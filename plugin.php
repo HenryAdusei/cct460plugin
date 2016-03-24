@@ -134,7 +134,9 @@ add_action( 'widgets_init', 'register_authentic_widget' );
             while( $query-> have_posts() ){
 			$string .= '<p>';
 			$query->the_post();
-			$string .= '<p><a href="' . get_permalink() . '">' . get_the_title() . get_the_post_thumbnail() . '</a></p>'; //This code shows the post title and the featured image. 
+			$string .= '<p><a href="' . get_permalink() . '">' . get_the_title().'</a></p>';
+			$string .= '<p>'.get_the_post_thumbnail() . '</p>'; 
+//This code shows the post title and the featured image. 
 //Referenced from http://wordpress.stackexchange.com/questions/58880/shortcode-displaying-custom-post-types
             }
 			$string .= '</p>';
