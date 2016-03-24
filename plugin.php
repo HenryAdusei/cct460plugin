@@ -1,8 +1,8 @@
 <?php
 /* 
-* Plugin Name: Authentic Plugin 
+* Plugin Name: Authentic Bike Plugin 
 * Plugin URI: http://www.phoenix.sheridanc.on.ca/~ccit3395
-* Description: Custom Post Type, Widget, and Shortcode
+* Description: Custom Post Type, Widget, and Short code
 * Author: Henry Adusei, Nabeel Jamal, Nabeel Shaikh
 * Author URI: http://www.phoenix.sheridanc.on.ca/~ccit3395
 * Version: 1.0 
@@ -134,7 +134,7 @@ add_action( 'widgets_init', 'register_authentic_widget' );
             while( $query-> have_posts() ){
 			$string .= '<p>';
 			$query->the_post();
-			$string .= '<p><a href="' . get_permalink() . '">' . get_the_title() . get_the_post_thumbnail() . '</a></p>'; //This code shows the title of the post and the featured image. 
+			$string .= '<p><a href="' . get_permalink() . '">' . get_the_title() . get_the_post_thumbnail() . '</a></p>'; //This code shows the post title and the featured image. 
 //Referenced from http://wordpress.stackexchange.com/questions/58880/shortcode-displaying-custom-post-types
             }
 			$string .= '</p>';
