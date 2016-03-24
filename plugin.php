@@ -40,6 +40,7 @@ function create_post_type() {
  
 			'public' => true,
 			'menu_position' => 15,
+			'menu_icon' => 'dashicons-star-filled',
 			'supports' => array( 'title', 'editor', 'comments', 'thumbnail' ),
 			'taxonomies' => array( '' ),
 			'has_archive' => true
