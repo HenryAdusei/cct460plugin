@@ -1,6 +1,6 @@
 <?php
 /* 
-* Plugin Name: Authentic Bike Plugin 
+* Plugin Name: Authentic Bikes Plugin 
 * Plugin URI: http://www.phoenix.sheridanc.on.ca/~ccit3395
 * Description: Custom Post Type, Widget, and Short code
 * Author: Henry Adusei, Nabeel Jamal, Nabeel Shaikh
