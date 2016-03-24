@@ -13,20 +13,27 @@ Once the plugin has been installed, a custom post type, a widget, and a shortcod
 
 CUSTOM POST TYPE
 The custom post type in this plugin is "Featured Bikes." This was designed for our client Authentic Bikes in order to show any featured products they may want to promote to their viewers. In order to utilize this custom post type:
-	1. Once in the Dashboard menu, mouse-over the Featured Bikes heading in the menu. You will see there is are two subsections, consisting of Featured Bikes, and Add New.
-	2. Clicking Add New will allow you to add a new Featured Bike post. Posts in this plugin are written in a similar fashion to regular posts.
-	3. Clicking on Featured Bikes will take you to a list of all existing Featured Bike posts.
+	1. Once in the Dashboard menu, mouse-over the Featured Bikes heading in the menu. You will see there are two subsections, consisting of Featured Bikes, and Add New.
+	2. Clicking on Featured Bikes will take you to a list of all existing Featured Bike posts. Clicking Add New will allow you to add a new Featured Bike post. 
+	3. Posts in this custom post type are written in a similar fashion to regular posts.
+	4. After inserting any content in the post, insert the Featured Image you would like the posts to display when shown using the widget or shortcode. This can be done by pressing the Featured Image button on the right side of the page.
+	5. Press Publish on the right side of the page, and your post will have been created.
+	
 
 WIDGET
-Once you have created Featured Bikes posts, they can be displayed in the widget which comes with the plugin. In order to use the widget:
+Once you have created Featured Bikes posts, they can all be displayed in the widget which will be inserted into the sidebar or footer. In order to use the widget:
 	1. Once in the dashboard menu, enter the Appearance section, then the Widgets subsection.
 	2. Under the Available Widgets area, one of the available widgets should be Authentic Widget. Drag this widget into the sidebar, or into another section.
 	3. By clicking on Authentic Widgets once it has been put in, you can edit the title of the Widget that will appear once it is displayed. Press Save afterwards.
-	4. Enter the your Wordpress site and the widget should appear in the section where you placed it.
+	4. Enter the Settings section on the dashboard, then the Permalinks section.
+	5. Do not make any changes, simply press Save Changes. This will allow Wordpress to develop URLs for the content of your custom posts.
+	6. Enter your Wordpress site and the widget should appear in the section where you placed it.
 
 SHORTCODE
-Once you have created Featured Bikes posts, a shortcode can be used to display the latest three posts on any Worpress page. In order to use the shortcode:
+Once you have created Featured Bikes posts, a shortcode can be used to display the latest three posts on any Wordpress page. In order to use the shortcode:
 	1. Once in the dashboard menu, enter the Pages section.
 	2. Enter any specific page you would like to insert the shortcode inside.
 	3. In the content area, where you would like to insert the shortcode, simply write "[authentic_shortcode]".
-	4. Enter the page on your Wordpress site and the latest three Featured Bikes posts should appear.
+	4. Enter the Settings section on the dashboard, then the Permalinks section.
+	5. Do not make any changes, simply press Save Changes. This will allow Wordpress to develop URLs for the content of your custom posts.
+	6. Enter the page on your Wordpress site and the latest three Featured Bikes posts should appear.
