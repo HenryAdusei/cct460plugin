@@ -68,4 +68,24 @@ class authentic_widget extends WP_Widget {
             
 			if (!empty($title))
 			echo $before_title . $title . $after_title;?>
-								
+			<ul class="widget_list">
+			<!--The Custom Post Type Query is called authentic_featured-->
+			<?php
+				// This code creates the loop and runs it.
+					$custom_bike_posts = new WP_Query();
+				//This code defines the query post type which is authentic_featured. 
+					$custom_bike_posts->query('post_type=authentic_featured');
+				//This code will check to see if the query has posts.
+					while ($custom_bike_posts->have_posts()) : $custom_bike_posts->the_post();?>
+					<li>
+					<!--This shows the title of the post-->
+					<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+					<?php 
+				//This code will check if there is featured image.
+					if ( has_post_thumbnail() ) {the_post_thumbnail();}?>
+                    </li>
+					<?php endwhile; ?>
+				</ul>
+				<?php
+			echo $after_widget;
+		}
