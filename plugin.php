@@ -116,3 +116,31 @@ function register_authentic_widget() {
 	register_widget( 'authentic_widget' );
 }
 add_action( 'widgets_init', 'register_authentic_widget' );
+
+
+/* This short code adds the short code and can be referenced from 
+* http://codex.wordpress.org/Class_Reference/WP_Query, and
+* https://codex.wordpress.org/Function_Reference/wp_reset_postdata 
+*/
+    function custom_post_type_shortcode(){
+        $args = array(
+            'post_type' => 'authentic_featured', //the post type which will be shown in the short code
+            'post_status' => 'publish', //the content of the post will be published
+			'posts_per_page' => 3 //only two posts will be shown on pages with the short code.
+        );
+		$string = '';
+        $query = new WP_Query( $args );
+        if( $query-> have_posts() ){
+            while( $query-> have_posts() ){
+			$string .= '<p>';
+			$query->the_post();
+			$string .= '<p><a href="' . get_permalink() . '">' . get_the_title() . get_the_post_thumbnail() . '</a></p>'; //This code shows the title of the post and the featured image. 
+//Referenced from http://wordpress.stackexchange.com/questions/58880/shortcode-displaying-custom-post-types
+            }
+			$string .= '</p>';
+        }
+        wp_reset_postdata();
+        return $string;
+		}
+	add_shortcode('authentic_shortcode', 'custom_post_type_shortcode');
+?>
