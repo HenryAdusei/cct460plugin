@@ -126,7 +126,7 @@ add_action( 'widgets_init', 'register_authentic_widget' );
         $args = array(
             'post_type' => 'authentic_featured', //the post type which will be shown in the short code
             'post_status' => 'publish', //the content of the post will be published
-			'posts_per_page' => 3 //only two posts will be shown on pages with the short code.
+			'posts_per_page' => 3 //the latest three posts will be shown on pages with the short code.
         );
 		$string = '';
         $query = new WP_Query( $args );
